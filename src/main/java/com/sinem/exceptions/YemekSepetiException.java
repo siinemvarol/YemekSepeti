@@ -13,15 +13,15 @@ import lombok.Getter;
  */
 
 @Getter
-public class CustomerException extends RuntimeException {
+public class YemekSepetiException extends RuntimeException {
 
     private final ErrorType errorType;
-    public CustomerException(ErrorType errorType){
+    public YemekSepetiException(ErrorType errorType){
         super(errorType.getMessage());
         this.errorType = errorType;
     }
 
-    public CustomerException(ErrorType errorType, String message){
+    public YemekSepetiException(ErrorType errorType, String message){
         super(message);
         this.errorType = errorType;
     }

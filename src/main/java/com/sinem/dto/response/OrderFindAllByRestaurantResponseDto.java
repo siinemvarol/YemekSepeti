@@ -1,2 +1,17 @@
-package com.sinem.dto.response;public class OrderFindAllByRestaurantResponseDto {
+package com.sinem.dto.response;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class OrderFindAllByRestaurantResponseDto {
+    private Long orderId;
+    private String customerName;
+    private Long restaurantId;
+    private String restaurantName;
 }

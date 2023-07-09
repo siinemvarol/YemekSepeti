@@ -28,9 +28,9 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorMessage> hatalariYakalayanBenim(Exception ex){
         return new ResponseEntity<>(createErrorMessage(ex, ErrorType.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
     }
-    @ExceptionHandler(AuthException.class)
+    @ExceptionHandler(YemekSepetiException.class)
     @ResponseBody
-    public ResponseEntity<ErrorMessage> Java8StartExceptionHandler(AuthException ex){
+    public ResponseEntity<ErrorMessage> Java8StartExceptionHandler(YemekSepetiException ex){
         return new ResponseEntity<>(createErrorMessage(ex, ex.getErrorType()), ex.getErrorType().getHttpStatus());
     }
 

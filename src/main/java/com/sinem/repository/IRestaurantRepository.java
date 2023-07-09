@@ -1,2 +1,14 @@
-package com.sinem.repository;public interface IRestaurantRepository {
+package com.sinem.repository;
+
+import com.sinem.repository.entity.Restaurant;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface IRestaurantRepository extends JpaRepository<Restaurant, Long> {
+
+
+
 }
